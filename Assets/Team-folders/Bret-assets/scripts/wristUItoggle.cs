@@ -11,13 +11,13 @@ public class wristUItoggle : MonoBehaviour
     void Start()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(TurnOnAndOff);
-        wristUIIsEnabled = true;
+        wristUIIsEnabled = false;
         wristUI.SetActive(wristUIIsEnabled);
     }
 
     private void TurnOnAndOff()
     {
-        wristUIIsEnabled ^= false;
+        wristUIIsEnabled ^= true;
         wristUI.SetActive(wristUIIsEnabled);
     }
 }

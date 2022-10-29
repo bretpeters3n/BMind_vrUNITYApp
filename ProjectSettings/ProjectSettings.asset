@@ -790,20 +790,6 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: PROBUILDER_EXPERIMENTAL_FEATURES
-    CloudRendering: PROBUILDER_EXPERIMENTAL_FEATURES
-    EmbeddedLinux: PROBUILDER_EXPERIMENTAL_FEATURES
-    GameCoreXboxOne: PROBUILDER_EXPERIMENTAL_FEATURES
-    Lumin: PROBUILDER_EXPERIMENTAL_FEATURES
-    Nintendo Switch: PROBUILDER_EXPERIMENTAL_FEATURES
-    PS4: PROBUILDER_EXPERIMENTAL_FEATURES
-    PS5: PROBUILDER_EXPERIMENTAL_FEATURES
-    Stadia: PROBUILDER_EXPERIMENTAL_FEATURES
-    Standalone: PROBUILDER_EXPERIMENTAL_FEATURES
-    WebGL: PROBUILDER_EXPERIMENTAL_FEATURES
-    Windows Store Apps: PROBUILDER_EXPERIMENTAL_FEATURES
-    XboxOne: PROBUILDER_EXPERIMENTAL_FEATURES
-    tvOS: PROBUILDER_EXPERIMENTAL_FEATURES
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
@@ -824,8 +810,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
-  metroPackageVersion: 
+  metroPackageName: Template3D
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -833,7 +819,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: BMind_vrUNITYApp
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
