@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 5687004157831482330}
   - component: {fileID: 5687004157831482329}
   m_Layer: 0
-  m_Name: smart-watch
+  m_Name: smart-watch-v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
