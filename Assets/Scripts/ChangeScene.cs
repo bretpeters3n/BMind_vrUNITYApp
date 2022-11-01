@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public string levelName;
-
-    void OnTriggerEnter(Collider other)
+    public void MoveToScene(int sceneID)
     {
-        SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene(sceneID);
     }
 }
