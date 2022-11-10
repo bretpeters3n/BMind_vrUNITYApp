@@ -427,7 +427,7 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: -88.87314
+    min: 0.50627995
     max: 112.488846
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -533,7 +533,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &54940489
 GameObject:
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 64486603}
   - component: {fileID: 64486602}
   - component: {fileID: 64486601}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1450,6 +1450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_917033_Mug&Coffee_Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4143fc5aeb59b5d46aa7100c9fd7f355,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4143fc5aeb59b5d46aa7100c9fd7f355, type: 3}
 --- !u!1 &274607502
@@ -1464,7 +1469,7 @@ GameObject:
   - component: {fileID: 274607505}
   - component: {fileID: 274607504}
   - component: {fileID: 274607503}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1545,7 +1550,8 @@ Transform:
   m_LocalPosition: {x: 5.741, y: 1.341, z: 3.292}
   m_LocalScale: {x: 0.19841, y: -0.24491496, z: 0.25498497}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1387959678}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1822,7 +1828,7 @@ GameObject:
   - component: {fileID: 416633346}
   - component: {fileID: 416633345}
   - component: {fileID: 416633344}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Right Ray Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3576,7 +3582,7 @@ GameObject:
   - component: {fileID: 838677563}
   - component: {fileID: 838677562}
   - component: {fileID: 838677561}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4130,7 +4136,7 @@ GameObject:
   - component: {fileID: 993176229}
   - component: {fileID: 993176228}
   - component: {fileID: 993176227}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Left Ray Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4754,15 +4760,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 6199973837208729506, guid: 03363bf476696af44a6b5a5d1229f0a5,
+    - target: {fileID: 6199973837021075095, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 6199973837208729506, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6199973837341537080, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6199973837475924900, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
@@ -4824,7 +4835,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cabinet
       objectReference: {fileID: 0}
+    - target: {fileID: 6199973837475924903, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 6199973837699453559, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199973837699453559, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199973837805520035, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
       value: 13
@@ -4832,9 +4858,19 @@ PrefabInstance:
     - target: {fileID: 6199973837923265652, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6199973838152829799, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199973838280428216, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199973838291711172, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
       value: 13
@@ -4842,9 +4878,19 @@ PrefabInstance:
     - target: {fileID: 6199973838308310141, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6199973838657566057, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199973838674771503, guid: 03363bf476696af44a6b5a5d1229f0a5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199973838674960982, guid: 03363bf476696af44a6b5a5d1229f0a5,
         type: 3}
       propertyPath: m_Layer
       value: 13
@@ -5084,6 +5130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: umbrella version3 v2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3c49edc2f2b41bb4eafcf0d56fc2258c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8362872436580295185, guid: 3c49edc2f2b41bb4eafcf0d56fc2258c,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -5240,7 +5291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1131044403}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5581,7 +5632,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -2.29, z: 0}
   m_Axis: {x: 0, y: 0, z: 1.02}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 5.714, y: 1.201613, z: 3.311}
   m_UseSpring: 1
   m_Spring:
     spring: 0
@@ -5813,14 +5864,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387959671}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.714, y: 1.633, z: 3.311}
-  m_LocalScale: {x: -0.012952751, y: 0.1883786, z: 0.047041006}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1360816, y: -1.1922507, z: 0.074514404}
+  m_LocalScale: {x: -0.065282755, y: -0.7691592, z: 0.18448542}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838677564}
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 274607506}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1393912158
 GameObject:
@@ -5833,7 +5884,7 @@ GameObject:
   - component: {fileID: 1393912160}
   - component: {fileID: 1393912159}
   - component: {fileID: 1393912161}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: XR Origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6047,6 +6098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_2531208_iphone+se
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1550194fc3626de458c0ee16db58e0f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1550194fc3626de458c0ee16db58e0f7, type: 3}
 --- !u!1 &1552980547
@@ -6201,8 +6257,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.06120866, y: 0.10839542, z: 0.018687755}
+  m_Center: {x: -0.0036009585, y: 0.7505683, z: 0.0056333337}
 --- !u!1 &1589196632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,6 +6604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: nescafe_mug
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c5ffba20c21d88e4c9504e081cde7605,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ffba20c21d88e4c9504e081cde7605, type: 3}
 --- !u!1001 &1657844832
@@ -6616,6 +6677,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Clock_fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d6b1d5b3a5c80c439e325d4cb53e863,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d6b1d5b3a5c80c439e325d4cb53e863, type: 3}
@@ -7274,7 +7340,7 @@ GameObject:
   - component: {fileID: 1875237813}
   - component: {fileID: 1875237812}
   - component: {fileID: 1875237811}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7894,6 +7960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PENS_LOW_POLY
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cc5e344725333574c8fb9f06f0e408ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5e344725333574c8fb9f06f0e408ac, type: 3}
 --- !u!1 &1983080363
@@ -8043,7 +8114,7 @@ GameObject:
   - component: {fileID: 2079341186}
   - component: {fileID: 2079341185}
   - component: {fileID: 2079341188}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
