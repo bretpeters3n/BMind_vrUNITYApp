@@ -8,12 +8,13 @@ public class Crystals : MonoBehaviour
     {
         PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
+
         if (playerInventory != null)
         {
             playerInventory.CrystalCollected();
             gameObject.SetActive(false);
-        }
 
+        }
 
     }
 }
