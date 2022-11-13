@@ -1058,7 +1058,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1976,7 +1976,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 886450143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1216120317}
+        m_TargetAssemblyTypeName: SkipGameIntro, Assembly-CSharp
+        m_MethodName: SkipIntro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &886450143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2162,6 +2174,7 @@ GameObject:
   - component: {fileID: 1216120314}
   - component: {fileID: 1216120315}
   - component: {fileID: 1216120316}
+  - component: {fileID: 1216120317}
   m_Layer: 5
   m_Name: canvas-intro
   m_TagString: Untagged
@@ -2307,6 +2320,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &1216120317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216120309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c6c9ee946a2344c8178be60b6c2dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameIntroAnimator: {fileID: 1216120314}
 --- !u!1 &1261477708
 GameObject:
   m_ObjectHideFlags: 0
