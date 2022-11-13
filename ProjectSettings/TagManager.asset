@@ -15,11 +15,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - Teleportation
-  - Grab
   - Body
-  - Grab-Blaster
+  - Grab
+  - Grab Ignore Ray
+  - 
+  - 
   - 
   - 
   - 
