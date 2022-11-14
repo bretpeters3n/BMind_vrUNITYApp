@@ -14,6 +14,5 @@ public class Crystals : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-
     }
 }
