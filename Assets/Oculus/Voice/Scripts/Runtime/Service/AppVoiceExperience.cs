@@ -1,33 +1,22 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+/**************************************************************************************************
+ * Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
  *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
+ * Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
  * https://developer.oculus.com/licenses/oculussdk/
  *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+ * Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+ * under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ **************************************************************************************************/
 
-using System;
 using Facebook.WitAi;
 using Facebook.WitAi.Configuration;
 using Facebook.WitAi.Interfaces;
-using Facebook.WitAi.Lib;
+#if UNITY_ANDROID
 using Oculus.Voice.Bindings.Android;
-using Oculus.Voice.Core.Bindings.Android.PlatformLogger;
-using Oculus.Voice.Core.Bindings.Interfaces;
+#endif
 using Oculus.Voice.Interfaces;
-using Oculus.VoiceSDK.Utilities;
 using UnityEngine;
 
 namespace Oculus.Voice
@@ -36,11 +25,6 @@ namespace Oculus.Voice
     public class AppVoiceExperience : VoiceService, IWitRuntimeConfigProvider
     {
         [SerializeField] private WitRuntimeConfiguration witRuntimeConfiguration;
-        [Tooltip("Uses platform services to access wit.ai instead of accessing wit directly from within the application.")]
-        [SerializeField] private bool usePlatformServices;
-
-        [Tooltip("Enables logs related to the interaction to be displayed on console")]
-        [SerializeField] private bool enableConsoleLogging;
 
         public WitRuntimeConfiguration RuntimeConfiguration
         {
@@ -50,14 +34,6 @@ namespace Oculus.Voice
 
         private IPlatformVoiceService platformService;
         private IVoiceService voiceServiceImpl;
-        private IVoiceSDKLogger voiceSDKLoggerImpl;
-#if UNITY_ANDROID && !UNITY_EDITOR
-        private readonly string PACKAGE_VERSION = "46.0.1";
-#endif
-
-        private bool Initialized => null != voiceServiceImpl;
-
-        public event Action OnInitialized;
 
         #region Voice Service Properties
         public override bool Active => null != voiceServiceImpl && voiceServiceImpl.Active;
@@ -73,49 +49,27 @@ namespace Oculus.Voice
                                                   null == TranscriptionProvider;
         #endregion
 
-        #if UNITY_ANDROID && !UNITY_EDITOR
-        public bool HasPlatformIntegrations => usePlatformServices && voiceServiceImpl is VoiceSDKImpl;
-        #else
         public bool HasPlatformIntegrations => false;
-        #endif
-
-        public bool EnableConsoleLogging => enableConsoleLogging;
-
-        public bool UsePlatformIntegrations
-        {
-            get => usePlatformServices;
-            set
-            {
-                // If we're trying to turn on platform services and they're not currently active we
-                // will forcably reinit and try to set the state.
-                if (usePlatformServices != value || HasPlatformIntegrations != value)
-                {
-                    usePlatformServices = value;
-#if UNITY_ANDROID && !UNITY_EDITOR
-                    Debug.Log($"{(usePlatformServices ? "Enabling" : "Disabling")} platform integration.");
-                    InitVoiceSDK();
-#endif
-                }
-            }
-        }
 
         #region Voice Service Methods
 
-        public override void Activate(string text, WitRequestOptions options)
+        public override void Activate()
         {
-            voiceSDKLoggerImpl.LogInteractionStart(options.requestID, "message");
-            voiceServiceImpl.Activate(text, options);
+            voiceServiceImpl.Activate();
         }
 
         public override void Activate(WitRequestOptions options)
         {
-            voiceSDKLoggerImpl.LogInteractionStart(options.requestID, "speech");
             voiceServiceImpl.Activate(options);
+        }
+
+        public override void ActivateImmediately()
+        {
+            voiceServiceImpl.ActivateImmediately();
         }
 
         public override void ActivateImmediately(WitRequestOptions options)
         {
-            voiceSDKLoggerImpl.LogInteractionStart(options.requestID, "speech");
             voiceServiceImpl.ActivateImmediately(options);
         }
 
@@ -129,42 +83,36 @@ namespace Oculus.Voice
             voiceServiceImpl.DeactivateAndAbortRequest();
         }
 
+        public override void Activate(string text)
+        {
+            voiceServiceImpl.Activate(text);
+        }
+
+        public override void Activate(string text, WitRequestOptions requestOptions)
+        {
+            voiceServiceImpl.Activate(text, requestOptions);
+        }
+
         #endregion
+
+        void Start()
+        {
+            InitVoiceSDK();
+        }
 
         private void InitVoiceSDK()
         {
-            // Clean up if we're switching to native C# wit impl
-            if (!UsePlatformIntegrations && voiceServiceImpl is VoiceSDKImpl)
-            {
-                ((VoiceSDKImpl) voiceServiceImpl).Disconnect();
-            }
+
 #if UNITY_ANDROID && !UNITY_EDITOR
-            var loggerImpl = new VoiceSDKPlatformLoggerImpl();
-            loggerImpl.Connect(PACKAGE_VERSION);
-            voiceSDKLoggerImpl = loggerImpl;
-            if (UsePlatformIntegrations)
+            if (HasPlatformIntegrations)
             {
-                Debug.Log("Checking platform capabilities...");
-                var platformImpl = new VoiceSDKImpl(this);
-                platformImpl.OnServiceNotAvailableEvent += () => RevertToWitUnity();
-                platformImpl.Connect(PACKAGE_VERSION);
-                platformImpl.SetRuntimeConfiguration(RuntimeConfiguration);
+                IPlatformVoiceService platformImpl = new VoiceSDKImpl();
                 if (platformImpl.PlatformSupportsWit)
                 {
                     voiceServiceImpl = platformImpl;
-
-                    if (voiceServiceImpl is Wit wit)
-                    {
-                        wit.RuntimeConfiguration = witRuntimeConfiguration;
-                    }
-
-                    voiceServiceImpl.VoiceEvents = VoiceEvents;
-                    voiceSDKLoggerImpl.LogAnnotation("isUsingPlatformSupport", "true");
-                    voiceSDKLoggerImpl.IsUsingPlatformIntegration = true;
                 }
                 else
                 {
-                    Debug.Log("Platform registration indicated platform support is not currently available.");
                     RevertToWitUnity();
                 }
             }
@@ -173,25 +121,8 @@ namespace Oculus.Voice
                 RevertToWitUnity();
             }
 #else
-            voiceSDKLoggerImpl = new VoiceSDKConsoleLoggerImpl();
             RevertToWitUnity();
 #endif
-            voiceSDKLoggerImpl.WitApplication =
-                RuntimeConfiguration.witConfiguration.WitApplicationId;
-            voiceSDKLoggerImpl.ShouldLogToConsole = EnableConsoleLogging;
-
-            OnInitialized?.Invoke();
-        }
-
-        private void RevertToWitUnity()
-        {
-            Wit w = GetComponent<Wit>();
-            if (null == w)
-            {
-                w = gameObject.AddComponent<Wit>();
-                w.hideFlags = HideFlags.HideInInspector;
-            }
-            voiceServiceImpl = w;
 
             if (voiceServiceImpl is Wit wit)
             {
@@ -199,109 +130,24 @@ namespace Oculus.Voice
             }
 
             voiceServiceImpl.VoiceEvents = VoiceEvents;
-            voiceSDKLoggerImpl.IsUsingPlatformIntegration = false;
         }
 
-        protected override void OnEnable()
+        private void RevertToWitUnity()
         {
-            base.OnEnable();
-            if (MicPermissionsManager.HasMicPermission())
+            voiceServiceImpl = GetComponent<Wit>();
+            if (null == voiceServiceImpl)
             {
-                InitVoiceSDK();
+                voiceServiceImpl = gameObject.AddComponent<Wit>();
             }
-            else
-            {
-                MicPermissionsManager.RequestMicPermission();
-            }
+        }
+
+        private void OnEnable()
+        {
+            if(null == voiceServiceImpl) InitVoiceSDK();
 
             #if UNITY_ANDROID && !UNITY_EDITOR
             platformService?.SetRuntimeConfiguration(witRuntimeConfiguration);
             #endif
-
-            // Logging
-            VoiceEvents.OnResponse?.AddListener(OnWitResponseListener);
-            VoiceEvents.OnAborted?.AddListener(OnAborted);
-            VoiceEvents.OnError?.AddListener(OnError);
-            VoiceEvents.OnStartListening?.AddListener(OnStartedListening);
-            VoiceEvents.OnStoppedListening?.AddListener(OnStoppedListening);
-            VoiceEvents.OnMicDataSent?.AddListener(OnMicDataSent);
         }
-
-        protected override void OnDisable()
-        {
-            base.OnDisable();
-            #if UNITY_ANDROID
-            if (voiceServiceImpl is VoiceSDKImpl platformImpl)
-            {
-                platformImpl.Disconnect();
-            }
-
-            if (voiceSDKLoggerImpl is VoiceSDKPlatformLoggerImpl loggerImpl)
-            {
-                loggerImpl.Disconnect();
-            }
-            #endif
-            voiceServiceImpl = null;
-
-            // Logging
-            VoiceEvents.OnResponse?.RemoveListener(OnWitResponseListener);
-            VoiceEvents.OnAborted?.RemoveListener(OnAborted);
-            VoiceEvents.OnError?.RemoveListener(OnError);
-            VoiceEvents.OnStartListening?.RemoveListener(OnStartedListening);
-            VoiceEvents.OnStoppedListening?.RemoveListener(OnStoppedListening);
-            VoiceEvents.OnMicDataSent?.RemoveListener(OnMicDataSent);
-        }
-
-        private void OnApplicationFocus(bool hasFocus)
-        {
-            if (hasFocus && !Initialized)
-            {
-                if (MicPermissionsManager.HasMicPermission())
-                {
-                    InitVoiceSDK();
-                }
-            }
-        }
-
-        #region Event listerns for logging
-
-        void OnWitResponseListener(WitResponseNode witResponseNode)
-        {
-            var tokens = witResponseNode?["speech"]?["tokens"];
-            if (tokens != null)
-            {
-                int speechTokensLength = tokens.Count;
-                string speechLength = witResponseNode["speech"]["tokens"][speechTokensLength - 1]?["end"]?.Value;
-                voiceSDKLoggerImpl.LogAnnotation("audioLength", speechLength);
-            }
-
-            voiceSDKLoggerImpl.LogInteractionEndSuccess();
-        }
-
-        void OnAborted()
-        {
-            voiceSDKLoggerImpl.LogInteractionEndFailure("aborted");
-        }
-
-        void OnError(string errorType, string errorMessage)
-        {
-            voiceSDKLoggerImpl.LogInteractionEndFailure($"{errorType}:{errorMessage}");
-        }
-
-        void OnStartedListening()
-        {
-            voiceSDKLoggerImpl.LogInteractionPoint("startedListening");
-        }
-
-        void OnStoppedListening()
-        {
-            voiceSDKLoggerImpl.LogInteractionPoint("stoppedListening");
-        }
-
-        void OnMicDataSent()
-        {
-            voiceSDKLoggerImpl.LogInteractionPoint("micDataSent");
-        }
-        #endregion
     }
 }
