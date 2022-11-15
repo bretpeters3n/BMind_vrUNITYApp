@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - Teleportation
-  - Grab
   - Body
+  - Grab
+  - Grab Ignore Ray
+  - 
   - 
   - 
   - 
