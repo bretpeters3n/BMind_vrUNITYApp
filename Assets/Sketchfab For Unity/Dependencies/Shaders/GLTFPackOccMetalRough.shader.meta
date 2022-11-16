@@ -8,6 +8,7 @@ ShaderImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< HEAD
 fileFormatVersion: 2
 <<<<<<<< HEAD:Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFFlipTexture.shader.meta
 guid: 2148855c70bb3a74aac99202d46b5a71
@@ -22,3 +23,5 @@ ShaderImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+>>>>>>> parent of a40e9c9 (Merge pull request #91 from bretpeters3n/Wendy_branch.2)

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Team-folders/Bret-assets/Materials/Audio.meta
 guid: 8447101368e3ce743b6f642c65492c07
+========
+guid: fde57acc906b8034e80d0bb002bcc995
+>>>>>>>> parent of a40e9c9 (Merge pull request #91 from bretpeters3n/Wendy_branch.2):Assets/Audio.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

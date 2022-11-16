@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Oculus/Interaction/Samples/ThirdParty/GradientSkybox/ThreeColorGradient.shader.meta
 guid: 87d58b1c0db8a6947bca68a506c1b428
 ========
 guid: 3ea322ca34a00714caae74206f3bcf04
 >>>>>>>> parent of 5047013 (Merge branch 'integration' into Bret-branch-2):Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFBumpToNormal.shader.meta
+=======
+guid: 3ea322ca34a00714caae74206f3bcf04
+>>>>>>> parent of a40e9c9 (Merge pull request #91 from bretpeters3n/Wendy_branch.2)
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []

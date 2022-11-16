@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<<< HEAD:Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFColorSpace.cginc.meta
 guid: c1cb90d5f19a6014496e87880cdf2be4
 ========
 guid: 2148855c70bb3a74aac99202d46b5a71
 >>>>>>>> parent of 5047013 (Merge branch 'integration' into Bret-branch-2):Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFFlipTexture.shader.meta
+=======
+guid: c1cb90d5f19a6014496e87880cdf2be4
+>>>>>>> parent of a40e9c9 (Merge pull request #91 from bretpeters3n/Wendy_branch.2)
 ShaderImporter:
   externalObjects: {}
   defaultTextures: []
