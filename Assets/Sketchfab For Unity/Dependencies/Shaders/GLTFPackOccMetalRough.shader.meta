@@ -8,3 +8,17 @@ ShaderImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFFlipTexture.shader.meta
+guid: 2148855c70bb3a74aac99202d46b5a71
+========
+guid: 63afd4bee3641ce4d8dfa1e8b39478af
+>>>>>>>> parent of 5047013 (Merge branch 'integration' into Bret-branch-2):Assets/Sketchfab For Unity/Dependencies/Shaders/GLTFPackOccMetalRough.shader.meta
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
