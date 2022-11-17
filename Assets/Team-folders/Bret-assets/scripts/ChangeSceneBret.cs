@@ -7,6 +7,7 @@ public class ChangeSceneBret : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {
+        Debug.Log("Clicked" + sceneID);
         SceneManager.LoadScene(sceneID);
     }
 }

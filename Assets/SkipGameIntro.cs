@@ -8,6 +8,7 @@ public class SkipGameIntro : MonoBehaviour
 
     public void SkipIntro()
     {
+        //Debug.Log("Clicked Skip Intro");
         GameIntroAnimator.SetTrigger("Skip Game Intro");
     }
 }
