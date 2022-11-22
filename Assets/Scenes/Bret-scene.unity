@@ -347,6 +347,7 @@ Transform:
   m_Children:
   - {fileID: 543450651924834866}
   - {fileID: 1580090673}
+  - {fileID: 1158700839}
   m_Father: {fileID: 1131044403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5334,6 +5335,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135644459}
   m_CullTransparentMesh: 1
+--- !u!1001 &1158700838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 64486595}
+    m_Modifications:
+    - target: {fileID: 354883473066023816, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 354883473066023818, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.800002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495115710319044596, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_Name
+      value: smart-watch-shared(originalMadeByEphraim)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.078
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7458599
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.045087703
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.08463374
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6591641
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 177.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -169.288
+      objectReference: {fileID: 0}
+    - target: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 97.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b7e5a02b1e272c41b322739703956bb, type: 3}
+--- !u!4 &1158700839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9128627215013543246, guid: 4b7e5a02b1e272c41b322739703956bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1158700838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1210343767
 GameObject:
   m_ObjectHideFlags: 0
@@ -10109,6 +10195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: smart-watch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278742772442510164, guid: d2970573a6be5294e9186de5705f932a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7946770112048065006, guid: d2970573a6be5294e9186de5705f932a,
         type: 3}
