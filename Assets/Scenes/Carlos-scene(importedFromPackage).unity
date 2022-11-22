@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.941
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.2825409, g: 0.3567472, b: 0.40659234, a: 0.941}
+  m_IndirectSpecularColor: {r: 0.28250694, g: 0.3568082, b: 0.4100564, a: 0.941}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -280,7 +280,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1151067154}
   m_Father: {fileID: 1131044403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3752,7 +3753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc2e5b5cb8ede04e859381e3131c858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalCount: {fileID: 0}
 --- !u!1 &617225537
 GameObject:
   m_ObjectHideFlags: 0
@@ -6611,6 +6611,101 @@ Transform:
   m_Father: {fileID: 1393912160}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1151067153
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 64486595}
+    m_Modifications:
+    - target: {fileID: 88421573166713089, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 88421573325868663, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 88421573919730936, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758071037029268198, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_text
+      value: Description of what to do in Carlos' scene goes here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8084622044294467568, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_Name
+      value: smart-watch-Ephraim-vShared
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7458599
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.045087703
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.08463374
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6591641
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 177.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -169.288
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 97.3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63eac5387212f27458c68a28a5d78cd7, type: 3}
+--- !u!4 &1151067154 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8897292376830547274, guid: 63eac5387212f27458c68a28a5d78cd7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1151067153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157896051
 GameObject:
   m_ObjectHideFlags: 0
@@ -11258,84 +11353,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1856435374
-Material:
-  serializedVersion: 8
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: SingleLine-LightSaber(Clone)
-  m_Shader: {fileID: 4800000, guid: 2d9a4ca4b2730b64e8aade7030f8caeb, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Ints: []
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _Glossiness: 0.5
-    - _LightSaberFactor: 0.8
-    - _LineScale: 0.009092801
-    - _LineWidth: 20
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _UvBasedLightSaberFactor: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 0, g: 0.9193516, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1869301640
 GameObject:
   m_ObjectHideFlags: 0

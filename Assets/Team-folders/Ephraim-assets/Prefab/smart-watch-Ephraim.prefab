@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8810072991960494600}
   m_Layer: 0
-  m_Name: smart-watch-Ephraim(original)
+  m_Name: smart-watch-Ephraim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
