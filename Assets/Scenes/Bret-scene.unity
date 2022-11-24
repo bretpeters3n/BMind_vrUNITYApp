@@ -2352,42 +2352,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478031526}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &480567028
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 480567029}
-  m_Layer: 0
-  m_Name: BentohBento
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &480567029
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 480567028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 207325179853355834}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &482756793
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,14 +4353,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965238321}
-  m_LocalRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.0081}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 422337858}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &979758014
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +4999,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 0}
+  m_AttachTransform: {fileID: 1309328524}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
@@ -5750,7 +5714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309328523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.98}
+  m_LocalPosition: {x: 0, y: 0, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9346,7 +9310,7 @@ PrefabInstance:
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
@@ -9356,22 +9320,22 @@ PrefabInstance:
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6574511
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6574511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.26030385
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.26030385
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8761945855025065089, guid: d43a0db7b5486b44fbce6fea326816e6,
         type: 3}
