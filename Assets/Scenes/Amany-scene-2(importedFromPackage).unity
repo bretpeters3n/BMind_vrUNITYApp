@@ -6011,15 +6011,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393912158}
-  m_LocalRotation: {x: -0.13705155, y: 0.98434085, z: 0.0039639063, w: -0.11078908}
-  m_LocalPosition: {x: 6.884, y: 0.375, z: 4.589}
+  m_LocalRotation: {x: -0.013528965, y: 0.9940363, z: -0.026810864, w: -0.10483315}
+  m_LocalPosition: {x: 6.352, y: 0.384, z: 3.365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1131044403}
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 1.293, y: 192.665, z: -15.709}
+  m_LocalEulerAnglesHint: {x: 3.218, y: 192.006, z: -1.221}
 --- !u!143 &1393912161
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6214,7 +6214,7 @@ GameObject:
   - component: {fileID: 1547767165}
   - component: {fileID: 1547767164}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
