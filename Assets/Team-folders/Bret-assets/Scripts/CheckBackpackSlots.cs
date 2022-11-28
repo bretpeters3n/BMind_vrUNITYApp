@@ -8,6 +8,7 @@ public class CheckBackpackSlots : MonoBehaviour
     public GameObject backpackCapacitySlots;
     public GameObject challengeSuccess;
     public GameObject challengeFail;
+    public GameObject tryAgain;
 
     public GameObject food;
     public GameObject wallet;
@@ -23,9 +24,11 @@ public class CheckBackpackSlots : MonoBehaviour
 
     public void CheckAllSocket()
     {
+        //public GameObject challengeFail;
+
         backpackCapacitySlots = GameObject.Find("Canvas-backpackCapSlots");
         challengeSuccess = GameObject.Find("Canvas-challengeSuccess");
-        challengeFail = GameObject.Find("Canvas-challengeFail");
+        tryAgain = GameObject.Find("TryAgainParent");
 
         food = GameObject.Find("Bento");
         wallet = GameObject.Find("wallet");
@@ -50,7 +53,6 @@ public class CheckBackpackSlots : MonoBehaviour
         else
         {
             Debug.Log("Challenge incomplete");
-            challengeFail.SetActive(true);
             //audioTryAgain.Play();
             //audioSource2.Play();
         }
