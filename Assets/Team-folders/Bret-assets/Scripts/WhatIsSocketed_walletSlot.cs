@@ -14,7 +14,7 @@ public class WhatIsSocketed_walletSlot : MonoBehaviour
         {
             itemInSocket = gameObject.GetComponent<XRSocketInteractor>().interactablesSelected;
             Debug.Log("Socket holds: " + itemInSocket[0].transform.name);
-            if (itemInSocket[0].transform.name == "wallet")
+            if (itemInSocket[0].transform.name == "Bento" || itemInSocket[0].transform.name == "wallet" || itemInSocket[0].transform.name == "id-card-design" || itemInSocket[0].transform.name == "clothes-pile")
             {
                 isWallet = true;
             }
