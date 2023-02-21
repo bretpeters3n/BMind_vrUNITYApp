@@ -119,7 +119,7 @@ Here's why:
 
 ### Trailer
 
-https://github.com/bretpeters3n/BMind_vrUNITYApp/blob/integration2/Assets/ReadMeAssets/BMind_Trailerv2-bret.mp4
+https://user-images.githubusercontent.com/87044274/220234041-010834af-867e-42d2-8536-d173d68a6b02.mp4
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
